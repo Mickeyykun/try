@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.1/dist/aframe-environment-component.min.js"></script>
+    <script src="./videos"></script>
+  </head>
+  <body>
+    <a-scene gltf-model="dracoDecoderPath: https://www.gstatic.com/draco/v1/decoders/;
+    meshoptDecoderPath: https://unpkg.com/meshoptimizer@0.16.0/meshopt_decoder.js;">
+        <a-assets>
+          <a-asset-item id="car" src="https://market-assets.fra1.cdn.digitaloceanspaces.com/market-assets/models/sports-sedan/model.gltf"></a-asset-item>
+          <a-asset-item id="house" src="https://market-assets.fra1.cdn.digitaloceanspaces.com/market-assets/models/house-7/model.gltf"></a-asset-item>
+          <a-asset-item id="poly_farm" src="https://market-assets.fra1.cdn.digitaloceanspaces.com/market-assets/models/low-poly-farm/model.gltf"></a-asset-item>
+          <a-asset-item id="barn" src="https://market-assets.fra1.cdn.digitaloceanspaces.com/market-assets/models/barn/model.gltf"></a-asset-item>
+          <a-asset-item id="tagabantay" src="https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/druid/model.gltf"></a-asset-item>
+          <a-asset-item id="dog" src="https://market-assets.fra1.cdn.digitaloceanspaces.com/market-assets/models/dogue/model.gltf"></a-asset-item>
+        </a-assets>
+      <a-sky color="#ECECEC"></a-sky>
+      <a-entity environment="preset: forest;"></a-entity>
+      <a-entity position="3.5 0 -15"   gltf-model="#car"></a-entity> 
+      <a-entity position="0 0 -15" scale="9 9 9"   gltf-model="#house"></a-entity>
+      <a-entity position="-14 0.1 7" scale="7 7 7"   gltf-model="#poly_farm"></a-entity>
+      <a-entity position="14 0.1 5" scale="7 7 7"   gltf-model="#barn"></a-entity>
+      <a-entity position="-14 0 20" scale="2 2 2" gltf-model="#tagabantay"></a-entity>
+      <a-entity position="-12 0 20" scale="1 1 1" gltf-model="#dog"></a-entity>
+      <a-video src="mickey/videos/welcome.mp4" autoplay="true" width="10" height="10" position="0 0 -8"></a-video>
+      <a-img src="mickey/images/sign.jpeg" width="10" height="10" position="0 20 -8"></a-img>
+
+    </a-scene>
+  </body>
+</html>
